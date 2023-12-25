@@ -37,7 +37,7 @@ func StartServer() {
 		// Запуск горутины для отправки статуса
 		go sendName(BreachID, password, fmt.Sprintf("http://localhost:8000/breaches/%d/name/", BreachID))
 
-		c.JSON(http.StatusOK, gin.H{"message": "Status update initiated"})
+		c.JSON(http.StatusOK, gin.H{"message": "Name update initiated"})
 	})
 	router.Run(":5000")
 
